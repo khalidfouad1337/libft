@@ -6,15 +6,17 @@
 /*   By: kfouad <kfouad@student1337.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 00:15:55 by kfouad            #+#    #+#             */
-/*   Updated: 2022/09/05 00:22:54 by kfouad           ###   ########.fr       */
+/*   Updated: 2022/09/15 02:31:37 by kfouad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strlen(char *str)
+#include "libft.h"
+
+size_t ft_strlen(const char *s)
 {
     int i;
     i = 0;
-    while (str[i])
+    while (s[i])
     {
         i++;
     }

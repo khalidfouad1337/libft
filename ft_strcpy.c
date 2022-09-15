@@ -6,19 +6,21 @@
 /*   By: kfouad <kfouad@student1337.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 23:13:58 by kfouad            #+#    #+#             */
-/*   Updated: 2022/09/07 23:32:51 by kfouad           ###   ########.fr       */
+/*   Updated: 2022/09/15 02:31:21 by kfouad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char    *ft_strcpy(char *s1, char *s2)
+#include "libft.h"
+
+char *ft_strcpy(char *dest, const char *src)
 {
     int i;
     i = 0;
-    while(s2[i] != '\0')
+    while(src[i] != '\0')
     {
-        s1[i] = s2[i];
+        dest[i] = src[i];
         i++;
     }
-    s1[i] = '\0';
-    return (s1);
+    dest[i] = '\0';
+    return (dest);
 }

@@ -6,10 +6,9 @@
 /*   By: kfouad <kfouad@student1337.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 15:57:13 by kfouad            #+#    #+#             */
-/*   Updated: 2022/09/03 15:57:14 by kfouad           ###   ########.fr       */
+/*   Updated: 2022/09/15 02:24:03 by kfouad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef LIBFT_H
 # define LIBFT_H
@@ -74,4 +73,4 @@ void	ft_lstclear(t_list	**lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-#endif 
+#endif

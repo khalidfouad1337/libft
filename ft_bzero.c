@@ -6,9 +6,11 @@
 /*   By: kfouad <kfouad@student1337.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 23:37:43 by kfouad            #+#    #+#             */
-/*   Updated: 2022/09/13 17:35:19 by kfouad           ###   ########.fr       */
+/*   Updated: 2022/09/15 02:27:33 by kfouad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void ft_bzero(void *s, size_t n)
 {

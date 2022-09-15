@@ -6,11 +6,13 @@
 /*   By: kfouad <kfouad@student1337.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 23:41:16 by kfouad            #+#    #+#             */
-/*   Updated: 2022/09/07 23:49:57 by kfouad           ###   ########.fr       */
+/*   Updated: 2022/09/15 02:32:22 by kfouad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char    *strncpy(char *s1, char *s2, int n)
+#include "libft.h"
+
+char *ft_strncpy(char *dest, const char *src, size_t n)
 {
     int i;
     i = 0;

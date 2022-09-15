@@ -6,11 +6,13 @@
 /*   By: kfouad <kfouad@student1337.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 21:18:30 by kfouad            #+#    #+#             */
-/*   Updated: 2022/09/07 21:34:21 by kfouad           ###   ########.fr       */
+/*   Updated: 2022/09/15 02:31:07 by kfouad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strcmp(char *s1, char *s2)
+#include "libft.h"
+
+int ft_strcmp(const char *s1, const char *s2)
 {
     int i;
     i = 0;

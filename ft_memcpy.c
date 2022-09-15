@@ -6,11 +6,13 @@
 /*   By: kfouad <kfouad@student1337.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 18:33:21 by kfouad            #+#    #+#             */
-/*   Updated: 2022/09/13 18:47:13 by kfouad           ###   ########.fr       */
+/*   Updated: 2022/09/15 02:29:36 by kfouad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *memcpy(void *dest, const void *src, size_t n)
+#include "libft.h"
+
+void *ft_memcpy(void *dest, const void *src, size_t n)
 {
     int i;
     i = 0;

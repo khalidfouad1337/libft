@@ -6,11 +6,13 @@
 /*   By: kfouad <kfouad@student1337.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 18:17:32 by kfouad            #+#    #+#             */
-/*   Updated: 2022/09/13 18:24:29 by kfouad           ###   ########.fr       */
+/*   Updated: 2022/09/15 02:34:18 by kfouad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *strrchr(const char *s, int c)
+#include "libft.h"
+
+char *ft_strrchr(const char *s, int c)
 {
     int i;
     i = 0;

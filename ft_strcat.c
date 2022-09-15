@@ -6,23 +6,25 @@
 /*   By: kfouad <kfouad@student1337.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 00:36:31 by kfouad            #+#    #+#             */
-/*   Updated: 2022/09/08 00:44:23 by kfouad           ###   ########.fr       */
+/*   Updated: 2022/09/15 02:30:31 by kfouad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char    *ft_strcat(char *s1, char *s2)
+#include "libft.h"
+
+char *ft_strcat(char *dest, const char *src)
 {
     int i;
     int j;
     i = 0;
-    while(s1[i] != '\0')
+    while(dest[i] != '\0')
         i++;
     j = 0;
-    while(s2[j] != '\0')
+    while(src[j] != '\0')
     {
-        s1[i + j] = s2[j];
+        dest[i + j] = src[j];
         j++;
     }
-    s1[i + j] = '\0';
-    return (s1);
+    dest[i + j] = '\0';
+    return (dest);
 }

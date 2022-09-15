@@ -6,23 +6,23 @@
 /*   By: kfouad <kfouad@student1337.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 23:38:00 by kfouad            #+#    #+#             */
-/*   Updated: 2022/09/09 01:07:48 by kfouad           ###   ########.fr       */
+/*   Updated: 2022/09/15 02:34:58 by kfouad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-char    *ft_strstr(char *s1, char *s2)
+char *ft_strstr(const char *haystack, const char *needle)
 {
     int i;
     int j;
     i = 0;
     j = 0;
     
-     while (s1[j] != '\0' && s2[i] != '\0')
+     while (haystack[j] != '\0' && needle[i] != '\0')
      {
         
-        if(s2[i] != s1[j + i])
+        if(needle[i] != haystack[j + i])
         {
             i = 0;
             j++;
@@ -30,14 +30,14 @@ char    *ft_strstr(char *s1, char *s2)
         else
         { 
             i++;
-            if(s2[i] == '\0')
-                return &s1[j];
+            if(needle[i] == '\0')
+                return (&haystack[j]);
         }
      }  
      return (NULL);
     
 }
-int main(int ac, char **av)
+/*int main(int ac, char **av)
 {
 	printf("the return value %s",ft_strstr(av[1],av[2]));
 }
