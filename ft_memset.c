@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kfouad <kfouad@student1337.com>            +#+  +:+       +#+        */
+/*   By: kfouad < kfouad@student.1337.ma>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 23:41:16 by kfouad            #+#    #+#             */
-/*   Updated: 2022/09/15 02:32:22 by kfouad           ###   ########.fr       */
+/*   Created: 2022/09/30 14:00:39 by kfouad            #+#    #+#             */
+/*   Updated: 2022/10/14 16:02:18 by kfouad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strncpy(char *dest, const char *src, size_t n)
+void	*ft_memset(void *b, int c, size_t len)
 {
-    int i;
-    i = 0;
-    while(s2[i] != '\0' && i < n)
-    {
-        s1[i] = s2[i];
-        i++;
-    }
-    s1[i] = '\0';
-    return (s1);
+	char	*p;
+	size_t	i;
+
+	p = (char *)b;
+	i = 0;
+	while (i < len)
+	{
+		p[i] = c;
+		i++;
+	}
+	return (p);
 }

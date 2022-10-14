@@ -1,23 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kfouad < kfouad@student.1337.ma>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/29 15:38:36 by kfouad            #+#    #+#             */
-/*   Updated: 2022/10/06 19:52:39 by kfouad           ###   ########.fr       */
+/*   Created: 2022/10/05 14:52:37 by kfouad            #+#    #+#             */
+/*   Updated: 2022/10/06 22:53:39 by kfouad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+int	ft_atoi(const char *str)
 {
-	size_t	i;
+	int	i;
+	int	n;
+	int	na9is;
 
 	i = 0;
-	while (s[i])
+	n = 0;
+	na9is = 1;
+	while (str[i] == '\f' || str[i] == '\n' || str[i] == '\r' || str[i] == '\t'
+		|| str[i] == '\v' || str[i] == ' ')
 		i++;
-	return (i);
+	if (str[i] == '-')
+	{
+		na9is = -1;
+		i++;
+	}
+	else if (str[i] == '+')
+		i++;
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		n = n * 10 + str[i] - 48;
+		i++;
+	}
+	return (n * na9is);
 }

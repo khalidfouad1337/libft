@@ -1,22 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kfouad <kfouad@student1337.com>            +#+  +:+       +#+        */
+/*   By: kfouad < kfouad@student.1337.ma>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 21:18:30 by kfouad            #+#    #+#             */
-/*   Updated: 2022/09/15 02:31:07 by kfouad           ###   ########.fr       */
+/*   Created: 2022/10/06 23:26:28 by kfouad            #+#    #+#             */
+/*   Updated: 2022/10/08 16:11:45 by kfouad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strcmp(const char *s1, const char *s2)
+char	*ft_strdup(const char *s1)
 {
-    int i;
-    i = 0;
-    while(s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
-        i++;
-    return (s1[i]-s2[i]);
+	char	*s;
+	char	*p;
+	int		i;
+
+	s = (char *)s1;
+	p = (char *)malloc ((ft_strlen(s) + 1) * sizeof(char));
+	i = 0;
+	if (!s[i])
+		return (NULL);
+	while (s[i])
+	{
+		p[i] = s[i];
+		i++;
+	}
+	p[i] = '\0';
+	return (p);
 }
